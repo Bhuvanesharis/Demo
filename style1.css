@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #2b1055, #7597de);
+}
+
+/* Player Card */
+.player {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    width: 320px;
+    border-radius: 22px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Album Image */
+.player img {
+    width: 260px;
+    height: 200px;
+    object-fit: fit;
+    border-radius: 18px;
+    box-shadow: 0 0 25px #ff4ecd;
+    animation: glow 3s infinite alternate;
+}
+
+/* Image Glow Animation */
+@keyframes glow {
+    from { box-shadow: 0 0 10px #ff4ecd; }
+    to { box-shadow: 0 0 30px #ff7ad9; }
+}
+
+/* Song Title */
+.player h2 {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffb3ec;
+}
+
+/* Artist Name */
+.player p {
+    font-size: 14px;
+    color: #e0d4ff;
+    margin-bottom: 15px;
+}
+
+/* Progress Bar */
+.progress {
+    background: rgba(255, 255, 255, 0.3);
+    height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #ff4ecd, #9f7aea);
+    animation: progressMove 4s infinite linear;
+}
+
+@keyframes progressMove {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.controls button {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.controls button:hover {
+    background: #ff4ecd;
+    color: black;
+    transform: scale(1.15);
+}
+
+/* Play Button Highlight */
+.play {
+    background: linear-gradient(135deg, #ff4ecd, #9f7aea);
+    color: black;
+    font-size: 20px;
+}
+
